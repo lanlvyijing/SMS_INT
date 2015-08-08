@@ -90,7 +90,7 @@ void handle_sysevt(VMINT message, VMINT param) {
     switch (message) {
         case VM_EVENT_CREATE:
         /* Creates a precise timer of 5 seconds with sms_interrupt_timer_callback(). */
-        timer_id = vm_timer_create_precise(5000, (vm_timer_precise_callback)sms_interrupt_timer_callback, NULL);
+        timer_id = vm_timer_create_precise(5000, (vm_timer_precise_callback)sms_interrupt_timer_callback, NULL);//×¢²á5sµÄ¶¨Ê±Æ÷¼ì²âSMS
         if(timer_id < 0){
             vm_log_debug("sms interrupt create timer fail");
         }
